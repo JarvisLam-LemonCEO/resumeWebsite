@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Resume Builder</h1>
+      <p>Create, save, preview, and export resumes</p>
+    </div>
+    <div class="topbar-actions">
+      <button id="newResumeBtn" class="secondary-btn">New Resume</button>
+      <button id="saveResumeBtn" class="primary-btn">Save Resume</button>
+      <button id="downloadPdfBtn" class="dark-btn">Download PDF</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Saved Resumes</h2>
+      <div id="resumeList" class="resume-list"></div>
+    </aside>
+
+    <section class="editor">
+      <div class="card">
+        <h2>Personal Information</h2>
+        <div class="grid two-col">
+          <input id="fullName" placeholder="Full Name" />
+          <input id="jobTitle" placeholder="Job Title" />
+          <input id="email" placeholder="Email" />
+          <input id="phone" placeholder="Phone" />
+          <input id="location" placeholder="Location" />
+          <input id="linkedin" placeholder="LinkedIn URL" />
+        </div>
+        <textarea id="summary" placeholder="Professional Summary"></textarea>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <h2>Education</h2>
+          <button id="addEducationBtn" class="secondary-btn small-btn">+ Add</button>
+        </div>
+        <div id="educationContainer"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <button id="addExperienceBtn" class="secondary-btn small-btn">+ Add</button>
+        </div>
+        <div id="experienceContainer"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <button id="addProjectBtn" class="secondary-btn small-btn">+ Add</button>
+        </div>
+        <div id="projectContainer"></div>
+      </div>
+
+      <div class="card">
+        <h2>Skills</h2>
+        <input id="skills" placeholder="e.g. JavaScript, React, Node.js, SQL, AWS" />
+      </div>
+    </section>
+
+    <section class="preview-panel">
+      <h2>Live Preview</h2>
+      <div id="resumePreview" class="resume-preview"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
